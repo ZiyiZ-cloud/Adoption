@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Adoption</title>
+    <link rel="stylesheet" href="/static/currency.css">
+  </head>
+  <body>
+    <h1>Homepage</h1>
+    
+    <ul>
+        {% for p in pet %}
+        <li> 
+            <img src = {{p.photo_url}} width=400px><br>
+            <form action='/{{p.id}}'>
+                <input type='submit' value=' {{ p.name}}'>
+             </form>
+             Adoption Available: {{p.available}}
+            </li>
+        {% endfor %}
+     </ul>    
+
+     <form action='/add'>
+        <input type='submit' value='Add Pet'>
+     </form>
+
+  </body>
+</html>

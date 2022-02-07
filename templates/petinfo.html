@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Adoption</title>
+    <link rel="stylesheet" href="/static/currency.css">
+  </head>
+  <body>
+    <h1>{{pet.id}}</h1>
+    
+    <ul>
+        
+        <li> 
+            <img src = {{pet.url}} width=400px><br>
+            Name: {{pet.name}}<br>
+            Specie: {{pet.specie}}<br>
+            Age: {{pet.age}}<br>
+            Notes: {{pet.notes}}<br>
+            Adoption Available: {{pet.available}}
+            </li>
+     </ul>    
+
+     <form action='/{{pet.id}}/edit'>
+        <input type='submit' value='Edit'>
+     </form>
+
+  </body>
+</html>
